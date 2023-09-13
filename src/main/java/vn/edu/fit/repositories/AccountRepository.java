@@ -1,10 +1,11 @@
 package vn.edu.fit.repositories;
 
 import jakarta.servlet.http.HttpSession;
+import vn.edu.fit.entities.Account;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AccountRepository {
     private Connection connection;
@@ -15,4 +16,6 @@ public class AccountRepository {
         Connection connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/mydb", "root", "sapassword");
         this.session = session;
     }
+
+
 }

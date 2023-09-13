@@ -21,7 +21,8 @@ public class ControlServlet extends HttpServlet {
             PrintWriter out = resp.getWriter();
             HttpSession session = req.getSession(true);
             repository = new AccountRepository(session);
-            System.out.println("connect");
+            String action = req.getParameter("action");
+            System.out.println(action);
         } catch (Exception e) {
             e.printStackTrace();
         }
