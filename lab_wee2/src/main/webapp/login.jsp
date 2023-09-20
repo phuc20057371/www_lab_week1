@@ -15,6 +15,7 @@
 </head>
 <body>
     <h1>Account List</h1>
+    <hr>
     <%
         if(request.getAttribute("account") != null){
             Account account = (Account) request.getAttribute("account");
@@ -66,7 +67,8 @@
                         </tbody>
                     </table>
                 </div>
-
+    <button> <a href="account.jsp">Create account</a></button>
+    <hr>
     <button> <a href="index.jsp">Log out</a></button>
 </body>
 </html>
